@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>DermaPRO</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  <!-- Custom styles for this template -->
+  <link href="product.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="#">
+        <img src="sm_logo_grey.png" width=30px>
+        <title>Product</title>
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+      <a class="py-2 d-none d-md-inline-block" href=file:///C:/Users/Mei/Documents/Insight/WebPage/developer.html>Meet Mei</a>
+    </div>
+  </nav>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <img src="logo.png" width=400px>
+      <p class="lead font-weight-normal" style="font-size:1.6em !important">A Reliable Real Time Mobile App for Skin Lesion Diagnosis</p>
+      <a class="btn btn-outline-secondary" href="#">Coming soon in Google Play</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="video">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Step 1: Scan your skin lesion</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EEJZuzV76iQ" allowfullscreen></iframe>
+        </div>
+        <p class="lead"> </p>
+      </div>
+    </div>
+    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-4">How to scan your skin lesion</h2>
+        <ul class='text-left lead'>
+          <li>Simply tap the DermaPRO app on your phone.</li>
+          <li>Use phone camera to focus on your skin lesion.</li>
+          <li>The diagnosis with a confidence rate will show on your phone screen in real time.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Step 2: Find medical suggestion</h2>
+        <form id="suggestion_form">
+          <div class="form-group">
+            <p>Select your skin condition.</p>
+            <div class="btn-group btn-group-toggle" id="condition_buttons" data-toggle="buttons">
+              <label class="btn btn-secondary" id="condition_nevus">
+                <input type="radio" name="options" autocomplete="off"> Nevus
+              </label>
+              <label class="btn btn-secondary" id="condition_melanoma">
+                <input type="radio" name="options" autocomplete="off"> Melanoma
+              </label>
+              <label class="btn btn-secondary" id="condition_sk">
+                <input type="radio" name="options" autocomplete="off"> Seborrheic Keratosis
+              </label>
+            </div>
+            <p> </p>
+            <p>Select confidence rate.</p>
+            <div class="btn-group btn-group-toggle" id="confidence_buttons" data-toggle="buttons">
+              <label class="btn btn-secondary" id="confidence_high">
+                <input type="radio" name="options" autocomplete="off"> &gt;75%
+              </label>
+              <label class="btn btn-secondary" id="confidence_med">
+                <input type="radio" name="options" autocomplete="off"> 50%-75%
+              </label>
+              <label class="btn btn-secondary" id="confidence_low">
+                <input type="radio" name="options" autocomplete="off"> &lt;50%
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">See Suggestion</button>
+        </form>
+      </div>
+    </div>
+    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="video">
+      <div class="my-3 py-3">
+        <h2 class="display-4">Medical advice</h2>
+        <div id="suggestion_result"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img src="sm_logo_black.png" width=40px>
+        <title>Product</title>
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+        <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+        <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+        <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+        <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+        <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+        </svg>
+        <small class="d-block mb-3 text-muted">&copy; 2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Demo</a></li>
+          <li><a class="text-muted" href=https://github.com/ziyoi>Codebase</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href=developer.html>Developer</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="/docs/4.2/assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script>
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    var condition;
+    var confidence;
+    $("#suggestion_form").submit(function(e) {
+      e.preventDefault();
+      confidence = '';
+      condition = '';
+      var ele = document.querySelectorAll("#confidence_buttons > .btn.active");
+      for (var i = 0; i < ele.length; i++) {
+        confidence = ele[i].id;
+      }
+      var ele = document.querySelectorAll("#condition_buttons > .btn.active");
+      for (var i = 0; i < ele.length; i++) {
+        condition = ele[i].id;
+      }
+      if (condition === "condition_nevus" && confidence === "confidence_low") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Uncertain skin condition, please contact a specialist.</p><p class='lead'>More Information:</p><p><a href=https://www.webmd.com/skin-problems-and-treatments/guide/skin-problems-treatments-diagnosis-tests>Skin Problems and Treatments, WebMD</a></p>"
+      }
+      if (condition === "condition_sk" && confidence === "confidence_low") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Uncertain skin condition, please contact a specialist.</p><p class='lead'>More Information:</p><p><a href=https://www.webmd.com/skin-problems-and-treatments/guide/skin-problems-treatments-diagnosis-tests>Skin Problems and Treatments, WebMD</a></p>"
+      }
+      if (condition === "condition_melanoma") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Contact specialist immediately.</p><p class='lead'>More Information:</p><p><a href=https://www.mayoclinic.org/diseases-conditions/melanoma/symptoms-causes/syc-20374884>Melanoma, Mayo Clinic</a></p><p><a href=https://www.skincancer.org/skin-cancer-information/melanoma>Melanoma, Skin Cancer Foundation</a></p><p><a href=https://www.aad.org/media/stats/conditions/skin-cancer>Skin cancer, American Academy of Dermatology</a></p>"
+      }
+      if (condition === "condition_nevus" && confidence === "confidence_high") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>No Action Needed.</p><p class='lead'>More Information:</p><p><a href=https://www.healthline.com/health/nevus>Nevus, healthline</a></p>"
+      }
+      if (condition === "condition_nevus" && confidence === "confidence_med") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Follow up with a reassessment with us or with a specialist after one year or when any changes noted.</p><p class='lead'>More Information:</p><p><a href=https://www.healthline.com/health/nevus>Nevus, healthline</a></p>"
+      }
+      if (condition === "condition_sk" && confidence === "confidence_high") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>No treatment is necessary. If this condition causes irritation, it can be removed by a dermatologist.</p><p class='lead'>More Information:</p><p><a href=https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878>Seborrheic keratosis, Mayo Clinic</a></p><p><a href=https://www.aad.org/public/diseases/bumps-and-growths/seborrheic-keratoses>Seborrheic keratoses, American Academy of Dermatology</a></p>"
+      }
+      if (condition === "condition_sk" && confidence === "confidence_med") {
+        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Follow up with a reassessment with us or with a specialist after one year or when any changes noted.</p><p class='lead'>More Information:</p><p><a href=https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878>Seborrheic keratosis, Mayo Clinic</a></p><p><a href=https://www.aad.org/public/diseases/bumps-and-growths/seborrheic-keratoses>Seborrheic keratoses, American Academy of Dermatology</a></p>"
+      }
+    });
+  </script>
+
+</html>
