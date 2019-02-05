@@ -92,8 +92,8 @@
               <label class="btn btn-secondary" id="condition_melanoma">
                 <input type="radio" name="options" autocomplete="off"> Melanoma
               </label>
-              <label class="btn btn-secondary" id="condition_sk">
-                <input type="radio" name="options" autocomplete="off"> Seborrheic Keratosis
+              <label class="btn btn-secondary" id="condition_other">
+                <input type="radio" name="options" autocomplete="off"> Other Types
               </label>
             </div>
             <p> </p>
@@ -179,7 +179,7 @@
       if (condition === "condition_nevus" && confidence === "confidence_low") {
         $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Uncertain skin condition, please contact a specialist.</p><p class='lead'>More Information:</p><p><a href=https://www.webmd.com/skin-problems-and-treatments/guide/skin-problems-treatments-diagnosis-tests>Skin Problems and Treatments, WebMD</a></p>"
       }
-      if (condition === "condition_sk" && confidence === "confidence_low") {
+      if (condition === "condition_other" ) {
         $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Uncertain skin condition, please contact a specialist.</p><p class='lead'>More Information:</p><p><a href=https://www.webmd.com/skin-problems-and-treatments/guide/skin-problems-treatments-diagnosis-tests>Skin Problems and Treatments, WebMD</a></p>"
       }
       if (condition === "condition_melanoma") {
@@ -190,12 +190,6 @@
       }
       if (condition === "condition_nevus" && confidence === "confidence_med") {
         $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Follow up with a reassessment with us or with a specialist after one year or when any changes noted.</p><p class='lead'>More Information:</p><p><a href=https://www.healthline.com/health/nevus>Nevus, healthline</a></p>"
-      }
-      if (condition === "condition_sk" && confidence === "confidence_high") {
-        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>No treatment is necessary. If this condition causes irritation, it can be removed by a dermatologist.</p><p class='lead'>More Information:</p><p><a href=https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878>Seborrheic keratosis, Mayo Clinic</a></p><p><a href=https://www.aad.org/public/diseases/bumps-and-growths/seborrheic-keratoses>Seborrheic keratoses, American Academy of Dermatology</a></p>"
-      }
-      if (condition === "condition_sk" && confidence === "confidence_med") {
-        $('#suggestion_result')[0].innerHTML = "<p class='lead'>Action Needed:</p><p>Follow up with a reassessment with us or with a specialist after one year or when any changes noted.</p><p class='lead'>More Information:</p><p><a href=https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878>Seborrheic keratosis, Mayo Clinic</a></p><p><a href=https://www.aad.org/public/diseases/bumps-and-growths/seborrheic-keratoses>Seborrheic keratoses, American Academy of Dermatology</a></p>"
       }
     });
   </script>
